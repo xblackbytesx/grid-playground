@@ -16,6 +16,24 @@ html {
   padding: 0;
 }
 
+$grid-items: (
+  navbar: (navbar, lightgreen),
+  header: (header, lightblue),
+  main: (main, lightgrey),
+  sidebar: (sidebar, yellow),
+  aside-1: (aside1, lightpink),
+  aside-2: (aside2, purple),
+  aside-3: (aside3, violet),
+  footer: (footer, #666)
+);
+
+@each $item, $value in $grid-items {
+  .#{$item} {
+    grid-area: nth($value, 1);
+    background-color: nth($value, 2);
+  }
+}
+
 #grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -34,49 +52,9 @@ html {
   height: 100vh;
   gap: $gutter;
   padding: $gutter;
-
-  .navbar {
-    grid-area: navbar;
-    background-color: lightgreen;
-  }
-
-  .header {
-    grid-area: header;
-    background-color: lightblue;
-  }
-
-  .main {
-    grid-area: main;
-    background-color: lightgrey;
-  }
-
-  .sidebar {
-    grid-area: sidebar;
-    background-color: yellow;
-  }
-
-  .aside-1 {
-    grid-area: aside1;
-    background-color: lightpink
-  }
-
-  .aside-2 {
-    grid-area: aside2;
-    background-color: purple;
-  }
-
-  .aside-3 {
-    grid-area: aside3;
-    background-color: violet;
-  }
-
-  .footer {
-    grid-area: footer;
-    background-color: #666;
-  }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   #grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
