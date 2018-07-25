@@ -1,0 +1,73 @@
+.html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+$gutter: 16px;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 40px 150px 1fr 1fr 1fr 50px;
+  grid-template-areas:
+    "navbar navbar navbar"
+    "header header header"
+    "main main sidebar"
+    "main main sidebar"
+    "aside1 aside2 aside3"
+    "footer footer footer";
+  height: 100vh;
+  gap: $gutter;
+  padding: $gutter;
+
+  .navbar {
+    grid-area: navbar;
+    background-color: lightgreen;
+  }
+
+  .header {
+    grid-area: header;
+    background-color: lightblue;
+  }
+
+  .main {
+    grid-area: main;
+    background-color: lightgrey;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: yellow;
+  }
+
+  .aside-1 {
+    grid-area: aside1;
+    background-color: lightpink
+  }
+
+  .aside-2 {
+    grid-area: aside2;
+    background-color: purple;
+  }
+
+  .aside-3 {
+    grid-area: aside3;
+    background-color: violet;
+  }
+
+  .footer {
+    grid-area: footer;
+    background-color: #666;
+  }
+}
