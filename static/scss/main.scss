@@ -18,15 +18,19 @@ html {
 
 #grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 40px 150px 1fr 1fr 1fr 50px;
   grid-template-areas:
-    "navbar navbar navbar"
-    "header header header"
-    "main main sidebar"
-    "main main sidebar"
-    "aside1 aside2 aside3"
-    "footer footer footer";
+    "navbar"
+    "header"
+    "main"
+    "main"
+    "sidebar"
+    "sidebar"
+    "aside1"
+    "aside2"
+    "aside3"
+    "footer";
   height: 100vh;
   gap: $gutter;
   padding: $gutter;
@@ -69,5 +73,18 @@ html {
   .footer {
     grid-area: footer;
     background-color: #666;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "navbar navbar navbar"
+      "header header header"
+      "main main sidebar"
+      "main main sidebar"
+      "aside1 aside2 aside3"
+      "footer footer footer";
   }
 }

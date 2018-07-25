@@ -16,57 +16,59 @@ html {
 #grid {
   display: -ms-grid;
   display: grid;
-      -ms-grid-columns: 1fr 16px 1fr 16px 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
       -ms-grid-rows: 40px 16px 150px 16px 1fr 16px 1fr 16px 1fr 16px 50px;
       grid-template-rows: 40px 150px 1fr 1fr 1fr 50px;
-      grid-template-areas: "navbar navbar navbar" "header header header" "main main sidebar" "main main sidebar" "aside1 aside2 aside3" "footer footer footer";
+      grid-template-areas: "navbar" "header" "main" "main" "sidebar" "sidebar" "aside1" "aside2" "aside3" "footer";
   height: 100vh;
   gap: 16px;
   padding: 16px; }
   #grid .navbar {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
     grid-area: navbar;
     background-color: lightgreen; }
   #grid .header {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
     grid-area: header;
     background-color: lightblue; }
   #grid .main {
     -ms-grid-row: 5;
     -ms-grid-row-span: 3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
     grid-area: main;
     background-color: lightgrey; }
   #grid .sidebar {
-    -ms-grid-row: 5;
+    -ms-grid-row: 9;
     -ms-grid-row-span: 3;
-    -ms-grid-column: 5;
+    -ms-grid-column: 1;
     grid-area: sidebar;
     background-color: yellow; }
   #grid .aside-1 {
-    -ms-grid-row: 9;
+    -ms-grid-row: 13;
     -ms-grid-column: 1;
     grid-area: aside1;
     background-color: lightpink; }
   #grid .aside-2 {
-    -ms-grid-row: 9;
-    -ms-grid-column: 3;
+    -ms-grid-row: 15;
+    -ms-grid-column: 1;
     grid-area: aside2;
     background-color: purple; }
   #grid .aside-3 {
-    -ms-grid-row: 9;
-    -ms-grid-column: 5;
+    -ms-grid-row: 17;
+    -ms-grid-column: 1;
     grid-area: aside3;
     background-color: violet; }
   #grid .footer {
-    -ms-grid-row: 11;
+    -ms-grid-row: 19;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
     grid-area: footer;
     background-color: #666; }
+
+@media screen and (min-width: 1024px) {
+  #grid {
+        -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "navbar navbar navbar" "header header header" "main main sidebar" "main main sidebar" "aside1 aside2 aside3" "footer footer footer"; } }
