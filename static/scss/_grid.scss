@@ -20,39 +20,6 @@ $grid-items: (
   text-align: footer;
 }
 
-// #grid {
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   grid-template-rows: 40px 50% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 50px;
-//   grid-template-areas:
-//     "navbar"
-//     "header"
-//     "main"
-//     "main"
-//     "sidebar"
-//     "sidebar"
-//     "boxes1"
-//     "boxes2"
-//     "boxes3"
-//     "footer";
-//   height: 100vh;
-//   gap: $gutter;
-//   padding: $gutter;
-// }
-//
-// @media screen and (min-width: 768px) {
-//   #grid {
-//     grid-template-columns: repeat(3, 1fr);
-//     grid-template-areas:
-//       "navbar navbar navbar"
-//       "header header header"
-//       "main main sidebar"
-//       "main main sidebar"
-//       "boxes1 boxes2 boxes3"
-//       "footer footer footer";
-//   }
-// }
-
 .sections {
   display: grid;
   grid-template-columns: 1fr;
@@ -63,7 +30,6 @@ $grid-items: (
     "section3"
     "section4"
     "section5";
-  height: 100vh;
 
   &__section--1 {
     grid-area: section1;
