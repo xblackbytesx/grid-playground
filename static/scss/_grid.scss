@@ -1,0 +1,103 @@
+$grid-items: (
+  navbar: (navbar, lightgreen),
+  header: (header, lightblue),
+  main: (main, lightgrey),
+  sidebar: (sidebar, yellow),
+  boxes--one: (boxes1, lightpink),
+  boxes--two: (boxes2, purple),
+  boxes--three: (boxes3, violet),
+  footer: (footer, #666)
+);
+
+@each $item, $value in $grid-items {
+  .#{$item} {
+    grid-area: nth($value, 1);
+    background-color: nth($value, 2);
+  }
+}
+
+// #grid {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: 40px 50% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 50px;
+//   grid-template-areas:
+//     "navbar"
+//     "header"
+//     "main"
+//     "main"
+//     "sidebar"
+//     "sidebar"
+//     "boxes1"
+//     "boxes2"
+//     "boxes3"
+//     "footer";
+//   height: 100vh;
+//   gap: $gutter;
+//   padding: $gutter;
+// }
+//
+// @media screen and (min-width: 768px) {
+//   #grid {
+//     grid-template-columns: repeat(3, 1fr);
+//     grid-template-areas:
+//       "navbar navbar navbar"
+//       "header header header"
+//       "main main sidebar"
+//       "main main sidebar"
+//       "boxes1 boxes2 boxes3"
+//       "footer footer footer";
+//   }
+// }
+
+.sections {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 1fr 1fr 100px;
+  grid-template-areas:
+    "section1"
+    "section2"
+    "section3"
+    "section4";
+  height: 100vh;
+
+  &__section--1 {
+    grid-area: section1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "navbar"
+  }
+
+  &__section--2 {
+    grid-area: section2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+  }
+
+  &__section--3 {
+    grid-area: section3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "sidebar";
+  }
+
+  &__section--4  {
+    grid-area: section4;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sections {
+    &__section--3 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "main main sidebar";
+    }
+  }
+}

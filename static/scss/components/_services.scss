@@ -1,0 +1,27 @@
+.services {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    ". . . . ."
+    ". service1 service2 service3 ."
+    ". service1 service2 service3 ."
+    ". . . . .";
+  height: 100%;
+
+  &__service {
+    background: #EEE;
+
+    &--1 {
+      grid-area: service1;
+    }
+
+    &--2 {
+      grid-area: service2;
+    }
+
+    &--3 {
+      grid-area: service3;
+    }
+  }
+}
