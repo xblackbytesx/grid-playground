@@ -1,12 +1,10 @@
 $grid-items: (
   navbar: (navbar, lightgreen),
-  header: (header, lightblue),
   main: (main, lightgrey),
   sidebar: (sidebar, yellow),
   boxes--one: (boxes1, lightpink),
   boxes--two: (boxes2, purple),
-  boxes--three: (boxes3, violet),
-  footer: (footer, #666)
+  boxes--three: (boxes3, violet)
 );
 
 @each $item, $value in $grid-items {
@@ -14,6 +12,12 @@ $grid-items: (
     grid-area: nth($value, 1);
     background-color: nth($value, 2);
   }
+}
+
+.footer {
+  @extend %wiggles;
+  grid-area: footer;
+  text-align: footer;
 }
 
 // #grid {
@@ -52,12 +56,13 @@ $grid-items: (
 .sections {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 40px 1fr 1fr 100px;
+  grid-template-rows: 40px 1fr 1fr 1fr auto;
   grid-template-areas:
     "section1"
     "section2"
     "section3"
-    "section4";
+    "section4"
+    "section5";
   height: 100vh;
 
   &__section--1 {
@@ -89,6 +94,16 @@ $grid-items: (
     grid-area: section4;
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "boxes";
+  }
+
+  &__section--5  {
+    grid-area: section5;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "footer";
   }
 }
 

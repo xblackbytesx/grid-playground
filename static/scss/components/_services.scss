@@ -1,13 +1,10 @@
 .services {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
   grid-template-areas:
-    ". . . . ."
-    ". service1 service2 service3 ."
-    ". service1 service2 service3 ."
-    ". . . . .";
-  height: 100%;
+    ". service1 service2 service3 .";
+  grid-area: services;
+  gap: $gutter;
 
   &__service {
     background: #EEE;
