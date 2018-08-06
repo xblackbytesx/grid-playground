@@ -1,6 +1,4 @@
 $grid-items: (
-  navbar: (navbar, lightgreen),
-  main: (main, lightgrey),
   sidebar: (sidebar, yellow),
   boxes--one: (boxes1, lightpink),
   boxes--two: (boxes2, purple),
@@ -14,10 +12,16 @@ $grid-items: (
   }
 }
 
-.footer {
+.navbar {
   @extend %wiggles;
-  grid-area: footer;
-  text-align: footer;
+  grid-area: navbar;
+  color: #FFF;
+}
+
+.main {
+  @extend %wiggles;
+  grid-area: main;
+  color: #FFF;
 }
 
 .sections {

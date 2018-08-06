@@ -1,3 +1,8 @@
+.footer {
+  @extend %wiggles;
+  grid-area: footer;
+}
+
 // .footer-links {
 //   display: flex;
 //

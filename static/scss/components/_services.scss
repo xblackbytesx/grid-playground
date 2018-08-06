@@ -1,13 +1,14 @@
 .services {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-    ". service1 service2 service3 .";
+    "service1 service2 service3";
   grid-area: services;
   gap: $gutter;
 
   &__service {
-    background: #EEE;
+    background: rgba(255,0,0,0.4);
+    border-radius: 9px;
 
     &--1 {
       grid-area: service1;
@@ -21,4 +22,10 @@
       grid-area: service3;
     }
   }
+}
+
+@media screen and (min-width: 768px) {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    ". service1 service2 service3 .";
 }
