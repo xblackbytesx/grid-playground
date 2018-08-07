@@ -1,8 +1,11 @@
 .boxes {
+  @extend %space;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "box1 box2 box3";
+  // gap: $gutter;
+  // padding: $gutter;
 
   &__box {
     @extend %carbon-fibre;

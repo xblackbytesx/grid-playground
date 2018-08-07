@@ -1,9 +1,11 @@
 .footer {
   @extend %wiggles;
   grid-area: footer;
+  padding: 50px 0;
 
   ul {
       padding: 0;
+      margin: 0 0 ($gutter * 2) 0;
   }
 
   li {
@@ -13,6 +15,7 @@
 
   h3 {
     color: #FFF;
+    margin: 0 0 5px 0;
   }
 
   a {
