@@ -1,111 +1,25 @@
 .footer {
   @extend %wiggles;
   grid-area: footer;
+
+  ul {
+      padding: 0;
+  }
+
+  li {
+      list-style: none;
+      line-height: 1.5em;
+  }
+
+  h3 {
+    color: #FFF;
+  }
+
+  a {
+      text-decoration: none;
+      color: #FFF;
+  }
 }
-
-// .footer-links {
-//   display: flex;
-//
-//   h3 {
-//     color: #FFF;
-//   }
-// }
-//
-// footer {
-//   ///////////////////////////////////////////////////////////////////////////////////
-//   $base-spacing: 1.5em !default;
-//   $base-accent-color: #477DCA !default;
-//   $medium-screen: em(640) !default;
-//   $large-screen: em(860) !default;
-//
-//   ul {
-//       padding: 0;
-//   }
-//
-//   li {
-//       list-style: none;
-//       line-height: 1.5em;
-//   }
-//
-//   a {
-//       text-decoration: none;
-//   }
-//   //////////////////////////////////////////////////////////////////////////////////
-//
-//   $footer-background: transparent url('https://www.fabiobier.com/static/img/earth.png') center bottom no-repeat;
-//   $footer-color: white;
-//   $footer-link-color: transparentize($footer-color, .6);
-//   $footer-disclaimer-color: transparentize($footer-color, .6);
-//   background: $footer-background;
-//
-//   .footer-logo {
-//     margin-bottom: 2em;
-//     text-align: center;
-//
-//     img {
-//         height: 3em;
-//     }
-//   }
-//
-//   .footer-links {
-//     margin-bottom: $base-spacing;
-//   }
-//
-//   ul {
-//     margin-bottom: $base-spacing * 2;
-//   }
-//
-//   li a {
-//     color: $footer-link-color;
-//
-//     &:focus,
-//     &:hover {
-//         color: transparentize($footer-color, 0);
-//     }
-//   }
-//
-//   li h3 {
-//     color: $footer-color;
-//     font-size: 1em;
-//     font-weight: 800;
-//     margin-bottom: .4em;
-//   }
-//
-//   hr {
-//     border: 1px solid transparentize($footer-disclaimer-color, .3);
-//     margin: 0 auto $base-spacing;
-//     width: 12em;
-//   }
-//
-//   p {
-//     color: $footer-disclaimer-color;
-//     font-size: .9em;
-//     line-height: 1.5em;
-//     margin: auto;
-//     max-width: 35em;
-//     text-align: center;
-//   }
-//
-//   @media screen and (min-width: 768px) {
-//     .footer-links {
-//       padding: 0 $gutter;
-//
-//       .list-collection__group {
-//         flex: 1 1 auto;
-//         text-align: center;
-//       }
-//
-//       ul {
-//         display: inline-block;
-//
-//         li {
-//           text-align: left;
-//         }
-//       }
-//     }
-//   }
-// }
-
 
 .navcols {
   display: grid;

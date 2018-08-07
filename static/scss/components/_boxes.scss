@@ -5,7 +5,7 @@
     "box1 box2 box3";
 
   &__box {
-    background: purple;
+    @extend %carbon-fibre;
 
     &--1 {
       grid-area: box1;

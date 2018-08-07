@@ -1,16 +1,15 @@
-$grid-items: (
-  sidebar: (sidebar, yellow),
-  boxes--one: (boxes1, lightpink),
-  boxes--two: (boxes2, purple),
-  boxes--three: (boxes3, violet)
-);
-
-@each $item, $value in $grid-items {
-  .#{$item} {
-    grid-area: nth($value, 1);
-    background-color: nth($value, 2);
-  }
-}
+// $grid-items: (
+//   boxes--1: (boxes1, lightpink),
+//   boxes--2: (boxes2, purple),
+//   boxes--3: (boxes3, violet)
+// );
+//
+// @each $item, $value in $grid-items {
+//   .#{$item} {
+//     grid-area: nth($value, 1);
+//     background-color: nth($value, 2);
+//   }
+// }
 
 .navbar {
   @extend %wiggles;
@@ -21,6 +20,12 @@ $grid-items: (
 .main {
   @extend %wiggles;
   grid-area: main;
+  color: #FFF;
+}
+
+.sidebar {
+  @extend %carbon;
+  grid-area: sidebar;
   color: #FFF;
 }
 
